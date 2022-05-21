@@ -1,0 +1,74 @@
+/*
+header,
+h1,
+.game-screen,
+.scoreboard,
+.round,
+p,
+.game,
+.rps-options,
+#scissor,
+#rock,
+#paper{
+    border: 2px solid black;
+}
+*/
+header{
+    padding: 2%;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+h1{
+    font-size: 2.5em;
+    font-weight: 600;
+}
+.round{
+    text-align: center;
+    padding: 10px;
+}
+.scoreboard{
+    border: 2px solid rgb(255, 103, 103);
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom:2%;
+    
+}
+.scoreboard p{
+    font-size: 25px;
+    font-weight: 600;
+    width: 10%;
+    text-align: center;
+}
+
+.scoreboard .scoreboard-you, .scoreboard .scoreboard-machine{
+    width: 40%;
+}
+
+.game{
+    height: 50vh;
+    display: flex;
+    justify-content: space-between;
+}
+.game #you-choice, .game #machine-choice{
+    border: 1px solid blueviolet;
+    width: 50%;
+}
+
+main{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.rps-options{
+    margin-top:35px;
+    height: 20vh;
+    justify-content: space-around;
+}
+
+
+.rps-options,
+.game,
+.scoreboard{
+    display: flex;
+}
