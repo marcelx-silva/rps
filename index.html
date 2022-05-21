@@ -12,13 +12,13 @@
         <h1 class="title">Pedra, Papel e Tesoura !</h1>
     </header>
     <main>
-        <h2 id="round">Round 1</h2>
+        <h2 class="round">Round <span id="round-number">1</span></h2>
         <div class="game-screen">
             <div class="scoreboard">
-                <p class="scoreboard you">Você</p>
+                <p class="scoreboard-you">Você</p>
                 <p id="score-you">0</p>
                 <p id="score-machine">0</p>
-                <p class="scoreboard machine">Máquina</p>        
+                <p class="scoreboard-machine">Máquina</p>        
             </div>
             <div class="game">
                 <div id="you-choice"></div>
@@ -26,11 +26,33 @@
             </div>
         </div>
         <div class="rps-options">
-            <div id="scissor"><img src="./style/images/scissor.png" alt="Tesoura"></div>
-            <div id="rock"><img src="./style/images/rock.png" alt="Pedra"></div>
-            <div id="paper"><img src="./style/images/paper.png" alt="Papel"></div>
+            <div id="scissor">
+                <figure>
+                    <img src="./style/images/scissor.png" alt="Tesoura">
+                    <figcaption>
+                        Tesoura
+                    </figcaption>
+                </figure>
+            </div>
+            <div id="rock">
+                <figure>
+                    <img src="./style/images/rock.png" alt="Pedra">
+                    <figcaption>
+                        Pedra
+                    </figcaption>
+                </figure>
+            </div>
+            <div id="paper">
+                <figure>
+                    <img src="./style/images/paper.png" alt="Papel">
+                    <figcaption>
+                        Papel
+                    </figcaption>
+                </figure>
+            </div>
         </div>
     </main>
     <footer></footer>
 </body>
 </html>
+
