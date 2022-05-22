@@ -1,3 +1,4 @@
+/*
 header,
 h1,
 .game-screen,
@@ -9,9 +10,10 @@ p,
 #scissor,
 #rock,
 #paper{
-    
+    border: 1px solid black;
 }
 
+*/
 header{
     padding: 2%;
     width: 80%;
