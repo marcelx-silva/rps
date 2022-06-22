@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,19 @@
     <link rel="stylesheet" href="./style/index.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <h1 class="title">Pedra, Papel e Tesoura !</h1>
     </header>
     <main>
-        <h2 class="round">Round <span id="round-number">1</span></h2>
+        <h2 class="round">Round <input type="number" value="0" id="round" readonly></h2>
         <div class="game-screen">
             <div class="scoreboard">
                 <p class="scoreboard-you">Você</p>
                 <input type="number" value="0" id="score-you" readonly>
                 <input type="number" value="0" id="score-machine" readonly>
-                <p class="scoreboard-machine">Máquina</p>        
+                <p class="scoreboard-machine">Máquina</p>
             </div>
             <div class="game">
                 <div id="you-choice"></div>
@@ -26,25 +28,25 @@
             </div>
         </div>
         <div class="rps-options">
-            <div id="scissor">
+            <div>
                 <figure>
-                    <img src="./style/images/scissor.png" alt="Tesoura">
+                    <img src="./style/images/scissor.png" alt="Tesoura" id="scissor" class="rps">
                     <figcaption>
                         Tesoura
                     </figcaption>
                 </figure>
             </div>
-            <div id="rock">
+            <div>
                 <figure>
-                    <img src="./style/images/rock.png" alt="Pedra">
+                    <img src="./style/images/rock.png" alt="Pedra" id="rock" class="rps">
                     <figcaption>
                         Pedra
                     </figcaption>
                 </figure>
             </div>
-            <div id="paper">
+            <div>
                 <figure>
-                    <img src="./style/images/paper.png" alt="Papel">
+                    <img src="./style/images/paper.png" alt="Papel" id="paper" class="rps">
                     <figcaption>
                         Papel
                     </figcaption>
@@ -54,7 +56,6 @@
     </main>
     <footer></footer>
 </body>
-<script src="./rps.js">
-</script>
-</html>
+<script src="./rps.js" defer> </script>
 
+</html>
