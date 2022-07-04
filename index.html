@@ -6,10 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/index.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="./style/images/left-scissor.png" type="image/x-icon">
+    <title>Jokenpô</title>
 </head>
 
 <body>
+    <div class="modal-container" id="modal-container">
+        <div class="modal">
+            <h2 class="modal-title">Modal Title</h2>
+            <p class="modal-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+            <button id="close-modal">
+                Fechar
+            </button>
+        </div>
+    </div>
     <header>
         <h1 class="title">Pedra, Papel e Tesoura !</h1>
     </header>
@@ -23,14 +35,23 @@
                 <p class="scoreboard-machine">Máquina</p>
             </div>
             <div class="game">
+                <div class="image-person">
+                    <img src="./style/images/person.png" alt="">
+                </div>
                 <div id="you-choice"></div>
+                <div class="divider">
+                    X
+                </div>
                 <div id="machine-choice"></div>
+                <div class="image-machine">
+                    <img src="./style/images/ai128.png" alt="">
+                </div>
             </div>
         </div>
         <div class="rps-options">
             <div>
                 <figure>
-                    <img src="./style/images/scissor.png" alt="Tesoura" id="scissor" class="rps">
+                    <img src="./style/images/left-scissor.png" alt="Tesoura" id="scissor" class="rps">
                     <figcaption>
                         Tesoura
                     </figcaption>
@@ -38,7 +59,7 @@
             </div>
             <div>
                 <figure>
-                    <img src="./style/images/rock.png" alt="Pedra" id="rock" class="rps">
+                    <img src="./style/images/left-rock.png" alt="Pedra" id="rock" class="rps">
                     <figcaption>
                         Pedra
                     </figcaption>
@@ -46,7 +67,7 @@
             </div>
             <div>
                 <figure>
-                    <img src="./style/images/paper.png" alt="Papel" id="paper" class="rps">
+                    <img src="./style/images/left-paper.png" alt="Papel" id="paper" class="rps">
                     <figcaption>
                         Papel
                     </figcaption>
@@ -54,7 +75,14 @@
             </div>
         </div>
     </main>
-    <footer></footer>
+    <footer>
+        <a href="https://github.com/marcelx-silva" target="_blank">
+            <img src="./style/images/GitHub_Logo_White.png" alt="Icone Github" height="25vh">
+        </a>
+        <a href="https://www.linkedin.com/in/marcelo-thiago/" target="_blank">
+            <img src="./style/images/LI-Logo.png" alt="Icone Linkedin" height="22vh">
+        </a>
+    </footer>
 </body>
 <script src="./rps.js" defer> </script>
 

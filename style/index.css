@@ -1,24 +1,39 @@
-/*
-header,
-h1,
-.game-screen,
-.scoreboard,
-.round,
-p,
-.game,
-.rps-options,
-#scissor,
-#rock,
-#paper{
-    border: 1px solid black;
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+* {
+    font-family: 'Secular One', sans-serif;
 }
 
-*/
+body {
+    background: linear-gradient(-45deg, #6A67CE, #947EC3, #B689C0, #EEF3D2);
+    position: relative;
+    background-size: 400% 400%;
+    animation: change 10s ease-in-out infinite;
+}
+
+@keyframes change {
+    0% {
+        background-position: 0 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0 50%;
+    }
+}
+
+
 header {
     padding: 2%;
-    width: 80%;
+    width: 140vh;
     text-align: center;
-    margin: 0 auto;
+    margin: 20px auto;
+    border-radius: 5px;
+    background-color: #353063;
+    color: white;
 }
 
 h1 {
@@ -29,14 +44,26 @@ h1 {
 .round {
     text-align: center;
     padding: 10px;
+
 }
 
+.round input {
+    width: 40px;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    background: none;
+}
+
+
 .scoreboard {
-    border: 2px solid rgb(255, 103, 103);
+    border: none;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 2%;
+
+    background-color: rgb(156, 166, 255);
 
 }
 
@@ -48,19 +75,20 @@ h1 {
 }
 
 .scoreboard input {
-    width: 35px;
+    width: 40px;
     height: 20px;
     border: none;
     font-size: 25px;
+    /*background-color: rgb(255, 204, 145);*/
+    background-color: rgb(156, 166, 255);
 }
 
-.round input {
-    width: 25px;
-    font-size: 20px;
-    font-weight: 600;
-    border: none;
-}
 
+.divider {
+    font-size: 10em;
+    margin: 0.2em;
+    color: black;
+}
 
 
 .scoreboard .scoreboard-you,
@@ -69,33 +97,145 @@ h1 {
 }
 
 .game {
-    height: 35vh;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-right: 15%;
     margin-left: 15%;
+
+
 }
 
 .game #you-choice,
 .game #machine-choice {
-    border: 1px solid blueviolet;
-    width: 50%;
+    /*background-color: #353063b0;*/
+    background-color: #353063b0;
+    padding-top: 5em;
+    width: 20%;
+
+}
+
+.game-screen {
+    padding: 15px;
+    background-color: #353063;
+    border-radius: 5px;
 }
 
 main {
     padding-left: 10%;
     padding-right: 10%;
+    height: 90vh;
+    width: 130vh;
+    margin: 0 auto;
 }
 
 .rps-options {
     margin-top: 35px;
     height: 20vh;
     justify-content: space-around;
+    border-top: 4px solid black;
+    padding-top: 15px;
 }
 
+.rps-options>div {
+    border: 2px solid black;
+    border-radius: 5%;
+
+    height: 20vh;
+    width: 20vh;
+
+    background-color: #353063;
+    font-weight: 600;
+    font-size: 1.8em;
+    color: white;
+}
+
+.rps-options>div:hover {
+    background-color: #524a94;
+    cursor: pointer;
+}
 
 .rps-options,
 .game,
-.scoreboard {
+.scoreboard,
+footer {
     display: flex;
+}
+
+.image-machine,
+.image-person {
+    display: block;
+    margin-top: 5em;
+}
+
+.modal {
+    background-color: white;
+    width: 60vh;
+    max-width: 100%;
+    height: 30vh;
+
+    border-radius: 5px;
+
+    padding: 2em;
+    text-align: center;
+}
+
+p.modal-text {
+    text-align: justify;
+}
+
+button#close-modal {
+    width: 15vh;
+    height: 5vh;
+
+    background-color: rgb(118, 186, 153, 1);
+    border: none;
+    cursor: pointer;
+
+    margin-top: 80px;
+    box-shadow: 0 2px 4px rgb(118, 186, 153, 1);
+}
+
+button#close-modal:hover {
+    background-color: rgb(118, 186, 153, 0.5);
+}
+
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+
+    background-color: rgb(95, 86, 173, 0.7);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.3s ease;
+
+}
+
+.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.victory-title {
+    color: rgb(118, 186, 153, 1);
+}
+
+.defeat-title {
+    color: #EB5353;
+}
+
+footer {
+    justify-content: center;
+}
+
+footer a {
+    margin: 15px;
 }

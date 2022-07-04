@@ -20,12 +20,17 @@ rps.forEach((rps) => {
         cleanRoundPick();
         winRound(playerSelection, machinePlay());
 
-        if (score_youNumber.value == 5 || score_machineNumber.value == 5) {
-
+        if (score_youNumber.value == 5) {
+            showGameWinner(1);
+            resetGame();
+        } else if (score_machineNumber.value == 5) {
+            showGameWinner(0);
+            resetGame();
+        } else {
+            nextRound();
         }
 
 
-        nextRound();
     })
 })
 
@@ -128,7 +133,7 @@ function showRoundPick(pSelection, mSelection) {
     const divMachine = document.querySelector("#machine-choice");
 
     const playerPick = document.createElement("img");
-    playerPick.setAttribute("src", "./style/images/" + pSelection + ".png");
+    playerPick.setAttribute("src", "./style/images/left-" + pSelection + ".png");
     playerPick.setAttribute("alt", pSelection);
 
     const machinePick = document.createElement("img");
@@ -166,6 +171,41 @@ function showRoundWinner(winner) {
 
 }
 
-function showGameWinner() {
 
+const modal_container = document.getElementById("modal-container").classList;
+const modal_title = document.querySelector(".modal-title").classList;
+const close = document.getElementById("close-modal");
+let modalTitle = document.querySelector(".modal-title");
+let modalText = document.querySelector(".modal-text");
+
+function showGameWinner(winner) {
+
+
+
+    if (winner) {
+        modalTitle.textContent = "Vitória !"
+        modalText.textContent = "Parabéns pela vitória! Obrigado por jogar :)."
+        modal_title.add("victory-title");
+    } else {
+        modalTitle.textContent = "Derrota !"
+        modalText.textContent = "Não foi dessa vez, tente novamente! Obrigado por jogar :)."
+        modal_title.add("defeat-title");
+    }
+
+
+    modal_container.add("show");
+
+    return;
+}
+
+close.addEventListener('click', resetModal);
+
+
+function resetModal() {
+    if (modalTitle.hasAttribute("victory-title")) {
+        modal_title.remove("victory-title");
+    } else {
+        modal_title.remove("defeat-title");
+    }
+    modal_container.remove("show");
 }
